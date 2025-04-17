@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Page</title>
     <link rel="stylesheet" href="{{asset('assets/fontawsome_css/all.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/vendor/swiper/js/swiper.min.css')}}">
     @vite('resources/css/app.css')
 </head>
 <body>
@@ -79,35 +80,39 @@
 <section class="section hero_section mb-10">
     <div class="container mx-auto">
         <div class="grid grid-cols-4 grid-row-1">
-            <div class="overflow-hidden col-span-3">
+            <div class="overflow-hidden col-span-4 lg:col-span-3">
                 <img src="{{asset('assets/images/hero_banner.jpg')}}" alt="" class="w-[100%]">
             </div>
-            <div class="p-5">
-                <ul>
-                    <li class="mb-10">
-                        <h5 class="text-3xl font-bold">01</h5>
-                        <h6 class="text-lg font-bold">Choose</h6>
-                        <p class="text-sm">Choose your Cow, from a large list of quality & verified cows.</p>
-                    </li>
+            <div class="p-5 col-span-4 lg:col-span-1">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul class="grid grid-cols-3 gap-3 lg:block">
+                                <li class="lg:mb-5 xl:mb-10">
+                                    <h5 class="text-2xl md:text-3xl font-bold">01</h5>
+                                    <h6 class="text-sm md:text-lg font-bold">Choose</h6>
+                                    <p class="text-[12px] md:text-sm">Choose your Cow, from a large list of quality & verified cows.</p>
+                                </li>
 
-                    <li class="mb-10">
-                        <h5 class="text-3xl font-bold">02</h5>
-                        <h6 class="text-lg font-bold">Buy</h6>
-                        <p class="text-sm">Easy Purchase with Online/ Offline Payment.</p>
-                    </li>
+                                <li class="lg:mb-5 xl:mb-10">
+                                    <h5 class="text-2xl md:text-3xl font-bold">02</h5>
+                                    <h6 class="text-sm md:text-lg font-bold">Buy</h6>
+                                    <p class="text-[12px] md:text-sm">Easy Purchase with Online/ Offline Payment.</p>
+                                </li>
 
-                    <li class="mb-10">
-                        <h5 class="text-3xl font-bold">03</h5>
-                        <h6 class="text-lg font-bold">Process</h6>
-                        <p class="text-sm">Request for Processing and get at your doorstep.</p>
-                    </li>
-                </ul>
-
-                <div class="slide_button flex gap-3">
-                    <button class="rounded-full w-10 h-10 flex justify-center items-center border-2 border-gray-400 text-gray-500 font-lg"> > </button>
-                    <button class="rounded-full w-10 h-10 flex justify-center items-center border-2 border-black text-white bg-black font-lg"> < </button>
+                                <li class="lg:mb-5 xl:mb-10">
+                                    <h5 class="text-2xl md:text-3xl font-bold">03</h5>
+                                    <h6 class="text-sm md:text-lg font-bold">Process</h6>
+                                    <p class="text-[12px] md:text-sm">Request for Processing and get at your doorstep.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="slide_button flex gap-3 mt-5 lg:mt-0 justify-center lg:justify-start">
+                    <button class="swiper-button-next rounded-full w-8 md:w-10 h-8 md:h-10 flex justify-center items-center border-2 border-gray-400 text-gray-500 font-lg"> <i class="fa-thin fa-arrow-right"></i> </button>
+                    <button class="swiper-button-prev rounded-full w-8 md:w-10 h-8 md:h-10 flex justify-center items-center border-2 border-black text-white bg-black font-lg"> <i class="fa-thin fa-arrow-left"></i> </button>
+                </div>
             </div>
         </div>
     </div>
@@ -454,5 +459,30 @@
 </section>
 
 
+<script src="{{asset('assets/vendor/swiper/js/swiper.min.js')}}"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        // direction: 'vertical',
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    document.querySelector('.swiper-button-next').addEventListener('click', () => {
+        swiper.slideNext();
+    });
+    document.querySelector('.swiper-button-prev').addEventListener('click', () => {
+        swiper.slidePrev();
+    });
+</script>
 </body>
 </html>
