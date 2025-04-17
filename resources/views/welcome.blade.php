@@ -9,21 +9,38 @@
 </head>
 <body>
 <section class="section header_section mb-10">
-    <header class="header_top border-b-2 border-gray-100 px-10 py-5">
-        <div class="grid gap-10 grid-cols-5 grid-rows-1 items-center">
-            <div class="logo_searchbar col-span-3 flex gap-10 items-center">
-                <div class="logo text-1xl font-bold">Online Goru Bazar</div>
-                <div class="searchbar grow">
+    <header class="header_top border-b-2 border-gray-100
+    px-5 lg:px-10
+    py-5">
+        <div class="grid
+            gap-5 md:gap-5 lg:gap-5 xl:gap-10
+            grid-cols-1 md:grid-cols-2 lg:grid-cols-7 xl:grid-cols-5
+            grid-rows-1
+            items-center
+            "
+        >
+            <div class="logo_searchbar
+                col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-3
+                flex
+                gap-2 lg:gap-1 xl:gap-10
+                flex-col lg:flex-row
+                items-center">
+                <div class="logo text-2xl lg:text-lg font-bold">Online Goru Bazar</div>
+                <div class="searchbar grow w-full lg:w-auto">
                     <input type="text" class="p-3 w-full bg-gray-100 rounded-md" placeholder="Search">
                 </div>
             </div>
-            <div class="nav justify-items-center">
+
+            <div class="nav
+            col-span-1 lg:col-span-2 xl:col-span-1
+            justify-items-center md:justify-items-start lg:justify-items-center">
                 <ul class="flex gap-4">
                     <li>About us</li>
                     <li>Contact Us</li>
                 </ul>
             </div>
-            <div class="cart">
+            <div class="cart
+            col-span-1 lg:col-span-2 xl:col-span-1">
                 <ul class="flex justify-between">
                     <li class="flex gap-2 items-center"><img src="{{asset('assets/images/globe.svg')}}" alt="globe.svg"> ভাষা</li>
                     <li class="flex gap-2 items-center"><img src="{{asset('assets/images/user-circle.svg')}}" alt="globe.svg"> User</li>
@@ -56,6 +73,8 @@
         </ul>
     </header>
 </section>
+
+
 <section class="section hero_section mb-10">
     <div class="container mx-auto">
         <div class="grid grid-cols-4 grid-row-1">
