@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{{asset('assets/fontawsome_css/all.css')}}">
     @vite('resources/css/app.css')
 </head>
 <body>
@@ -50,25 +51,25 @@
         </div>
     </header>
     <header class="header_bottom px-10 py-5 shadow-[0px_4px_8px_-2px_#1018281A]">
-        <ul class="flex gap-10 justify-center items-center">
+        <ul class="flex gap-5 md:gap-10 justify-center items-center">
             <li>
-                <a href="" class="flex gap-2 items-center"><img src="{{asset('assets/images/cow-icon.svg')}}" alt=""> গরু </a>
+                <a href="" class="flex flex-col md:flex-row gap-2 items-center"><img src="{{asset('assets/images/cow-icon.svg')}}" alt=""> গরু </a>
             </li>
             <li>
-                <a href="" class="flex gap-2 items-center"><img src="{{asset('assets/images/goat-icon.svg')}}" alt=""> ছাগল </a>
+                <a href="" class="flex flex-col md:flex-row gap-2 items-center"><img src="{{asset('assets/images/goat-icon.svg')}}" alt=""> ছাগল </a>
             </li>
             <li>
-                <a href="" class="flex gap-2 items-center"> <img src="{{asset('assets/images/khabar-icon.svg')}}" alt=""> খাবার </a>
+                <a href="" class="flex flex-col md:flex-row gap-2 items-center"> <img src="{{asset('assets/images/khabar-icon.svg')}}" alt=""> খাবার </a>
             </li>
 
             <li>
-                <a href="" class="flex gap-2 items-center"><img src="{{asset('assets/images/kshai-icon.svg')}}" alt=""> কসাই </a>
+                <a href="" class="flex flex-col md:flex-row gap-2 items-center"><img src="{{asset('assets/images/kshai-icon.svg')}}" alt=""> কসাই </a>
             </li>
             <li>
-                <a href="" class="flex gap-2 items-center"><img src="{{asset('assets/images/suri-icon.svg')}}" alt=""> ছুরি </a>
+                <a href="" class="flex flex-col md:flex-row gap-2 items-center"><img src="{{asset('assets/images/suri-icon.svg')}}" alt=""> ছুরি </a>
             </li>
             <li>
-                <a href="" class="flex gap-2 items-center"><img src="{{asset('assets/images/anusangik.svg')}}" alt=""> আনুষাঙ্গিক </a>
+                <a href="" class="flex flex-col md:flex-row gap-2 items-center"><img src="{{asset('assets/images/anusangik.svg')}}" alt=""> আনুষাঙ্গিক </a>
             </li>
         </ul>
     </header>
