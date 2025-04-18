@@ -14,3 +14,7 @@
 * {
     font-family: 'Inter', sans-serif;
 }
+
+.active_link {
+    color: #007aff;
+}
