@@ -7,7 +7,10 @@
     <title>@yield('title', 'Admin Dashboard')</title>
     <link rel="stylesheet" href="{{asset('assets/fontawsome_css/all.css')}}">
 
+
+    @stack('third_party_css')
     @vite('resources/css/admin.css')
+    @stack('css')
 </head>
 <body>
 
@@ -23,8 +26,9 @@
 
 </div>
 
+@stack('third_party_js')
 @vite('resources/js/admin.js')
-
+@stack('js')
 
 </body>
 </html>
