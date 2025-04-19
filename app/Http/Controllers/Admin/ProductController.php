@@ -61,9 +61,9 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show($slug)
     {
-        //
+        return view('frontend.pages.product.show', compact('slug'));
     }
 
     /**
