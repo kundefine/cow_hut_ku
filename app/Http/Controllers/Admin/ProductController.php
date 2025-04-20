@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Yajra\DataTables\Facades\DataTables;
 
 class ProductController extends Controller
@@ -47,7 +48,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.product.create');
     }
 
     /**
@@ -88,5 +89,17 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    public function uploadImages(Request $request)
+    {
+        $files = \Storage::allFiles("product_images_temp/{$request->query('productImageUploadId')}");
+
+
+
+        \Storage::putFileAs("product_images_temp/{$request->query('productImageUploadId')}", $request->file('productImages'), (count($files) + 1) . '.' .$request->file('productImages')->getClientOriginalExtension());
+
+
+        return response()->json(['success' => 'You have successfully uploaded an image.']);
     }
 }

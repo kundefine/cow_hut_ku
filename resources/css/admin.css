@@ -19,3 +19,15 @@
 .active_link {
     color: #007aff;
 }
+
+.ku_input {
+    @apply border-2 border-gray-400 bg-white outline-0 rounded-md px-5 py-2 focus:border-blue-600 focus:border-3 w-full
+}
+
+.ku_select {
+    @apply border-2 border-gray-400 bg-white outline-0 rounded-md px-6 py-2.5 focus:border-blue-600 focus:border-3 w-full
+}
+
+.ku_card {
+    @apply shadow-md border-2 border-gray-100 p-5
+}
