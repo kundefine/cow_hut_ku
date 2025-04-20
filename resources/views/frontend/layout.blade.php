@@ -13,10 +13,11 @@
     @stack('css')
 </head>
 <body>
+
     @include('frontend.inc.header')
-
-
     @yield('main')
+    @include('frontend.inc.footer')
+
 
 
     @stack('third_party_js')
