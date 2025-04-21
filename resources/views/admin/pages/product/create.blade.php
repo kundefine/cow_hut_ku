@@ -12,9 +12,10 @@
 
 @section('main')
     <h2 class="p-5 text-3xl font-bold">Product Create</h2>
-    <div class="p-5 grid grid-cols-3 gap-5">
+    <div class="p-5 grid grid-cols-3 gap-5 items-start">
         <div class="ku_card">
-            <form action="">
+            <form action="{{route('admin.products.store')}}" method="post" enctype="multipart/form-data">
+                @csrf
                 <input type="hidden" value="{{\Illuminate\Support\Str::uuid()}}" name="productImageUploadId">
                 <div class="mb-5">
                     <label for="name" class="block">Product Name</label>
@@ -50,11 +51,12 @@
                         <option value="">Breed 4</option>
                     </select>
                 </div>
-
+                <button class="p-2 bg-gray-200 cursor-pointer">Submit</button>
             </form>
         </div>
 
         <div class="col-span-2 ku_card">
+            <label for="breed_id" class="block">Product Images</label>
             <div id="productImages" class="w-full min-h-[250px] border-2 border-gray-500 dropzone"> </div>
         </div>
     </div>
@@ -77,7 +79,6 @@
             addedfiles: file => {
                 console.log(file)
             }
-
         })
     </script>
 @endpush
